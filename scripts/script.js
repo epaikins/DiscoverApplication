@@ -17,14 +17,14 @@ var users = [{
         age: 33,
         gender: 'M',
         hobby: 'music',
-        avatar: 'avatar3.png'
+        avatar: 'modelm1.jpg'
     },
     {
         name: 'Christopher',
         age: 13,
         gender: 'M',
         hobby: 'sports',
-        avatar: 'avatar4.png'
+        avatar: 'modelm3.jpg'
     },
     {
         name: 'Ximena',
@@ -38,14 +38,14 @@ var users = [{
         age: 25,
         gender: 'M',
         hobby: 'shopping',
-        avatar: 'avatar6.png'
+        avatar: 'modelm2.jpg'
     },
     {
-        name: 'Charlie',
+        name: 'Rita',
         age: 54,
-        gender: 'M',
+        gender: 'F',
         hobby: 'pets',
-        avatar: 'avatar7.png'
+        avatar: 'model4.jpg'
     },
 ];
 
