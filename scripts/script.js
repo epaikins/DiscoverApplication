@@ -3,14 +3,14 @@ var users = [{
         age: 23,
         gender: 'F',
         hobby: 'pets',
-        avatar: 'avatar1.png'
+        avatar: 'model1.jpg'
     },
     {
         name: 'Betty',
         age: 21,
         gender: 'F',
         hobby: 'pets',
-        avatar: 'avatar2.png'
+        avatar: 'model2.jpg'
     },
     {
         name: 'Ronald',
@@ -31,7 +31,7 @@ var users = [{
         age: 23,
         gender: 'F',
         hobby: 'reading',
-        avatar: 'avatar5.png'
+        avatar: 'model3.jpg'
     },
     {
         name: 'Paul',
@@ -82,10 +82,10 @@ window.addEventListener('load', function () {
                         resultsHtml += '<div class="person-row">\
                            <img src="assets/' + users[i].avatar + '" />\
                            <div class="person-info">\
-                           <div>' + users[i].name + '</div>\
-                           <div>' + users[i].age + '</div>\
-                           <div>' + users[i].hobby + '</div></div>\
-                            <button>Add as friend</button></div>';
+                           <div class="person-name">' + users[i].name + '</div>\
+                           <div class="person-age">' + users[i].age + '</div>\
+                           <div class="person-hobby">' + users[i].hobby + '</div></div>\
+                            <div class="love"><img src="assets/love2.svg" alt=""></div></div>';
                     }
                 }
             }

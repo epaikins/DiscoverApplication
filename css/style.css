@@ -1,45 +1,181 @@
 body {
   font-family: helvetica;
+  background-color: whitesmoke;
 }
 
 #header {
-  background-color: #f16f51;
+  /* background-color: ;  */
   height: 40px;
   text-align: center;
   line-height: 40px;
+  margin-bottom: 100px;
+}
+
+#header img {
+  width: 30px;
+  height: 30px;
 }
 
 h1 {
+  display: inline-block;
   vertical-align: middle;
-  color: white;
+  color: rgb(255, 92, 92);
   font-weight: bold;
+}
+
+.shadow {
+  box-shadow: 2px 2px 20px 0.1px rgba(0, 0, 0, 0.2);
 }
 
 .row {
   margin: 10px 20px;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+label {
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 10px;
+  color: grey;
+}
+
+select {
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid rgb(255, 92, 92);
+  color: grey;
+}
+
+select:focus {
+  outline: none;
+}
+
+input {
+  border: 1px solid rgb(255, 92, 92);
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border: 1px solid rgb(255, 92, 92);
+  background-color: white;
+  font-size: 20px;
+  padding: 10px;
+  color: rgb(255, 92, 92);
+  border-radius: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: rgb(255, 92, 92);
+  color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #results {
-  margin: 30px 20px 10px 0px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 3rem;
+  margin: 30px 20px 50px 20px;
 }
 
 .person-row {
   margin: 10px 0px;
-  padding: 10px;
-  background-color: #fdb45c;
-  width: 100%;
-  float: left;
+  /* margin-right: 200px; */
+  padding: 0px;
+  background-color: white;
+  width: 300px;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px 0.1px rgba(0, 0, 0, 0.2);
 }
 
 .person-row img {
-  float: left;
-  margin-right: 20px;
+  /* float: left; */
+  /* margin-right: 20px; */
+  border-radius: inherit;
+  width: inherit;
+  height: 380px;
 }
 
-.personal-info {
-  float: left;
+.person-info {
+  margin-left: 20px;
+}
+
+.person-name {
+  font-size: 30px;
+  font-family: poppins;
+  font-weight: bold;
+  color: rgb(255, 92, 92);
+}
+
+.person-age {
+  font-size: 15px;
+  font-family: poppins;
+  color: rgb(255, 92, 92);
+}
+
+.person-age::before {
+  content: " ◆ ";
+}
+
+.person-hobby {
+  font-size: 15px;
+  font-family: poppins;
+  color: rgb(255, 92, 92);
+  margin-top: 10px;
+}
+
+.person-hobby::before {
+  content: "Hobby : ";
 }
 
 .person-row > button {
   float: right;
+}
+
+.love {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  bottom: 30px;
+  left: 250px;
+}
+
+.love:hover {
+  cursor: pointer;
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+    saturate(5000%) contrast(0.8);
+  /* background: url("/assets/love.svg") no-repeat; */
+}
+
+.love:active {
+  cursor: pointer;
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+    saturate(5000%) contrast(0.8);
+}
+
+.love img {
+  width: inherit;
+  height: inherit;
+  /* border: 10px solid red; */
 }

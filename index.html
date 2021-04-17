@@ -3,19 +3,20 @@
 
 <head>
     <meta charset="utf-8">
-    <title>JAVASCRIPT</title>
+    <title>Discover</title>
     <!-- <link href="css/reset.css" rel="stylesheet"> -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <div id="header">
-        <h1>Zenva Love</h1>
+        <img src="assets/talk.svg" alt="">
+        <h1>Discover</h1>
     </div>
     <div id="main">
-        <div class="row">
+        <div class="row shadow">
             <div class="row">
-                <label>Gender</label>
+                <label>GENDER</label>
                 <select id="gender">
                     <option value="A">All</option>
                     <option value="F">Female</option>
@@ -24,21 +25,25 @@
 
             </div>
             <div class="row">
-                <label>Age</label>
+                <label>AGE</label>
                 <input id="minAge" type="text" placeholder="Enter Minimum Age">
                 <input id="maxAge" type="text" placeholder="Enter Maximum Age">
             </div>
             <div class="row">
-                <label>Hobbies</label>
+                <label>HOBBIES</label>
                 <input type="text" id="hobby" />
             </div>
             <div class="row">
                 <button id="searchBtn">Search</button>
             </div>
         </div>
-        <div id="results">
 
+        <div class="flex">
+            <div id="results">
+
+            </div>
         </div>
+
     </div>
     <script src="scripts/script.js"></script>
 </body>
