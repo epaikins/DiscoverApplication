@@ -1,41 +1,48 @@
 var users = [{
         name: 'Lucy',
+        age: 23,
         gender: 'F',
         hobby: 'pets',
         avatar: 'avatar1.png'
     },
     {
         name: 'Betty',
+        age: 21,
         gender: 'F',
         hobby: 'pets',
         avatar: 'avatar2.png'
     },
     {
         name: 'Ronald',
+        age: 33,
         gender: 'M',
         hobby: 'music',
         avatar: 'avatar3.png'
     },
     {
         name: 'Christopher',
+        age: 13,
         gender: 'M',
         hobby: 'sports',
         avatar: 'avatar4.png'
     },
     {
         name: 'Ximena',
+        age: 23,
         gender: 'F',
         hobby: 'reading',
         avatar: 'avatar5.png'
     },
     {
         name: 'Paul',
+        age: 25,
         gender: 'M',
         hobby: 'shopping',
         avatar: 'avatar6.png'
     },
     {
         name: 'Charlie',
+        age: 54,
         gender: 'M',
         hobby: 'pets',
         avatar: 'avatar7.png'
@@ -45,6 +52,8 @@ var users = [{
 window.addEventListener('load', function () {
 
     var results = document.getElementById('results');
+    let minAge = document.querySelector('#minAge');
+    let maxAge = document.querySelector('#maxAge');
 
     function search() {
 
@@ -63,14 +72,21 @@ window.addEventListener('load', function () {
         for (var i = 0; i < usersLength; i++) {
             //check gender
             if (gender == 'A' || gender == users[i].gender) {
-                //check hobby
-                if (hobby == '' || hobby == users[i].hobby) {
-                    resultsHtml += '<div class="person-row">\
-                           <img src="images/' + users[i].avatar + '" />\
+                //check Age
+                if ((minAge.value == '' && maxAge.value == "") ||
+                    (users[i].age >= minAge.value && maxAge.value == "") ||
+                    (minAge.value == '' && users[i].age <= maxAge.value) ||
+                    (users[i].age >= Number(minAge.value) && users[i].age <= Number(maxAge.value))) {
+                    //check hobby
+                    if (hobby == '' || hobby == users[i].hobby) {
+                        resultsHtml += '<div class="person-row">\
+                           <img src="assets/' + users[i].avatar + '" />\
                            <div class="person-info">\
                            <div>' + users[i].name + '</div>\
+                           <div>' + users[i].age + '</div>\
                            <div>' + users[i].hobby + '</div></div>\
                             <button>Add as friend</button></div>';
+                    }
                 }
             }
         }
